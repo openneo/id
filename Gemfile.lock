@@ -29,9 +29,14 @@ GEM
       activesupport (= 3.0.3)
     activesupport (3.0.3)
     arel (2.0.6)
+    bcrypt-ruby (2.1.2)
     builder (2.1.2)
+    devise (1.1.5)
+      bcrypt-ruby (~> 2.1.2)
+      warden (~> 1.0.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    haml (3.0.24)
     i18n (0.5.0)
     mail (2.2.12)
       activesupport (>= 2.3.6)
@@ -64,10 +69,14 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
+    warden (1.0.3)
+      rack (>= 1.0.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  mysql2
+  devise (~> 1.1.5)
+  haml (~> 3.0.24)
+  mysql2 (~> 0.2.6)
   rails (= 3.0.3)
