@@ -5,9 +5,17 @@ gem 'rails', '3.0.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'formtastic', '~> 1.2.2'
 gem 'devise', '~> 1.1.5'
-gem 'haml', '~> 3.0.24'
+gem 'haml', '~> 3.0'
 gem 'mysql2', '~> 0.2.6'
+
+# For Devise generators
+gem 'hpricot', '~> 0.8'
+gem 'ruby_parser', '~> 2.0'
+
+# For encryptor
+gem 'ruby-hmac', '~> 0.4.0'
 
 # Use unicorn as the web server
 # gem 'unicorn'
