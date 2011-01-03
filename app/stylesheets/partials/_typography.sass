@@ -1,0 +1,22 @@
+$font-color: #040
+$header-color: $font-color - #222
+$blueprint-font-family: 'Droid Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif
+$blueprint-font-size: 14px
+$link-color: $font-color + #222
+$link-visited-color: $link-color
+$link-hover-color: $font-color - #222
+$link-active-color: $link-hover-color
+$link-focus-color: $link-hover-color
+
+@import "blueprint/typography"
+
+body
+  +blueprint-typography(true)
+
+h1, h2, h3, h4, h5, h6
+  font-family: Delicious
+
+@font-face
+  font-family: Delicious
+  font-weight: bold
+  src: local("Delicious"), font-url("Delicious-Bold.otf")

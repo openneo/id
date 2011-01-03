@@ -1,0 +1,19 @@
+$main-bg-color: #FFF
+$secondary-bg-color: #EFE
+$secondary-bg-gradient-stops: color-stops($secondary-bg-color 50%, $secondary-bg-color - #444)
+
+=secondary-bg-gradient
+  background: $secondary-bg-color
+  +linear-gradient($secondary-bg-gradient-stops)
+
+$primary-border-color: #060
+$secondary-border-color: #CEC
+
+$container-border-color: $primary-border-color
+$container-border-width: 1px
+$container-v-offset: 2em
+
+$container-min-width: 625px
+$container-preferred-width: 50%
+
+$input-border-color: $secondary-border-color

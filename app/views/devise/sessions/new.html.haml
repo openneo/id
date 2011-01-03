@@ -1,8 +1,7 @@
 - title 'Sign in'
 = semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form|
   = form.inputs do
-    = form.input :name
-    = form.input :password
-    = form.input :remember_me, :as => :boolean
-  = form.submit 'Sign in'
-= render :partial => "devise/shared/links"
+    = form.input :name, :input_html => {:tabindex => 1, :autofocus => true}
+    = form.input :password, :input_html => {:tabindex => 2}
+    = form.submit 'Sign in', :tabindex => 4
+    = form.input :remember_me, :as => :boolean, :input_html => {:tabindex => 3}

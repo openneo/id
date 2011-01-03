@@ -1,0 +1,38 @@
+@import "constants"
+@import "compass/css3/border-radius"
+@import "compass/utilities/general/clearfix"
+
+form.formtastic
+  +clearfix
+  width: 50%
+  
+  fieldset ol
+    li
+      &.string input, &.password input, &.email input
+        +border-radius(2px)
+        border: 1px solid $input-border-color
+        float: right
+        padding: .5em
+        width: 55%
+      
+      &.boolean label
+        padding-left: 0
+      
+      &.error
+        &.string input, &.password input, &.email input
+          background: $error-bg-color
+          color: $error-color
+          border-color: $error-border-color
+    
+      p.inline-hints, p.inline-errors
+        clear: both
+        font-size: 85%
+        margin-left: 15%
+        text-align: right
+    
+    label
+      width: 35%
+    
+  input[type=submit]
+    float: right
+    padding: .5em

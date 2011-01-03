@@ -1,1 +1,6 @@
-%p Hello, world!
+- title "Welcome, #{current_user.name}!"
+%p
+  This is your Openneo ID dashboard. You can sign into other websites from
+  here and
+  = link_to 'change your settings', edit_user_registration_path
+  and whatnot.

@@ -2,16 +2,28 @@
 %html
   %head
     %title
-      Openneo ID:
+      OpenNeo ID:
       = title
-    = stylesheet_link_tag :all
-    = javascript_include_tag :defaults
-    = formtastic_stylesheet_link_tag
-    = csrf_meta_tag
+    = stylesheet_link_tag 'formtastic.css'
+    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'print.css', :media => 'print'
+    -# /[if lt IE 8]
+    -#   = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
   %body
-    %h1= title
+    %h1= link_to 'OpenNeo ID', root_path
+    %ul#nav
+      - if user_signed_in?
+        %li= nav_link "Settings", edit_user_registration_path
+        %li= nav_link "Sign out of \"#{current_user.name}\"", destroy_user_session_path
+      - else
+        %li= nav_link 'Sign in', new_user_session_path
+        %li= nav_link 'Sign up', new_user_registration_path
+        %li= nav_link 'Forgot password?', new_user_password_path
+    %h2= title
 
-    %p.notice= notice
-    %p.alert= alert
+    - if notice
+      %p.notice= notice
+    - if alert
+      %p.alert= alert
 
     = yield

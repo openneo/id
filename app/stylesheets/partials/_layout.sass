@@ -1,0 +1,62 @@
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+@import "compass/css3/gradient"
+@import "compass/utilities/links/hover-link"
+
+@import "blueprint/interaction"
+
+@import "constants"
+@import "form"
+@import "typography"
+
+html
+  +secondary-bg-gradient
+  min-height: 100%
+
+body
+  +border-radius(5px)
+  +box-shadow($secondary-bg-color - #222, 5px, 5px, 10px)
+  background: $main-bg-color
+  border: $container-border-width solid $container-border-color
+  margin: $container-v-offset auto
+  min-width: $container-min-width
+  padding: 1em
+  width: $container-preferred-width
+  
+  > p
+    width: 75%
+
+.notice
+  +success
+
+.alert
+  +error
+
+h1, #nav li a, #nav li span
+  display: block
+  float: left
+  margin-right: 1em
+  a
+    +hover-link
+
+#nav
+  display: block
+  list-style: none
+  margin-top: .75em
+  
+  li
+    a, span
+      +border-radius(2px)
+      border: 1px solid $primary-border-color
+      margin-bottom: .5em
+      padding: .5em 1em
+    
+    a
+      background: $secondary-bg-color
+    
+    span
+      background: $main-bg-color
+      font-weight: bold
+
+h2
+  clear: left

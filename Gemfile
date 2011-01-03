@@ -5,6 +5,7 @@ gem 'rails', '3.0.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'compass', '~> 0.10'
 gem 'formtastic', '~> 1.2.2'
 gem 'devise', '~> 1.1.5'
 gem 'haml', '~> 3.0'
