@@ -29,7 +29,7 @@ class HomeController < ApplicationController
         remote_sign_in(current_user, params)
         redirect_to remote_destination_url!
       else
-        @apps = Openneo::Auth::Server.apps
+        @apps = Openneo::Auth::Server.apps.values.to_a.sort { |a,b| a.name <=> b.name }
       end
     else
       redirect_to(new_user_session_path(sign_in_params))

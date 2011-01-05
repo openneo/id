@@ -1,7 +1,7 @@
 - title "Welcome, #{current_user.name}!"
 %h3 Log in to OpenNeo apps
 %ul
-  - @apps.each do |key, app|
+  - @apps.each do |app|
     %li= remote_sign_in_link_to app
 %p
   This is your Openneo ID dashboard. You can sign into other websites from
