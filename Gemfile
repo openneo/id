@@ -18,6 +18,10 @@ gem 'ruby_parser', '~> 2.0'
 # For encryptor
 gem 'ruby-hmac', '~> 0.4.0'
 
+# For Openneo Auth Server
+gem 'httparty', '~> 0.6.1'
+gem 'openneo-auth-signatory', '~> 0.1.0'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

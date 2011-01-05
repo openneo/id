@@ -421,7 +421,7 @@ h1 a:hover, #nav li a a:hover, #nav li span a:hover {
 #nav {
   display: block;
   list-style: none;
-  margin-top: 0.75em;
+  margin-top: 0.25em;
 }
 /* line 48, ../../app/stylesheets/partials/_layout.sass */
 #nav li a, #nav li span {

@@ -6,7 +6,7 @@
   %strong Do not use your Neopets or email password here.
   We don't expect a security breach, and we hash your password very securely.
   Regardless, if anything happens, we want there to be absolutely no harm done.
-= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form|
+= app_state_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form|
   = form.inputs do
     = form.input :name, :input_html => {:autofocus => true}
     = form.input :email

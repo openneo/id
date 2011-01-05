@@ -1,7 +1,6 @@
-- title 'Sign in'
-= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form|
+- title @app ? "Sign into #{link_to @app.name, @app.root_url}".html_safe : "Sign in"
+= app_state_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form|
   = form.inputs do
-    = form.input :name, :input_html => {:tabindex => 1, :autofocus => true}
-    = form.input :password, :input_html => {:tabindex => 2}
-    = form.submit 'Sign in', :tabindex => 4
-    = form.input :remember_me, :as => :boolean, :input_html => {:tabindex => 3}
+    = form.input :name, :input_html => {:autofocus => true}
+    = form.input :password
+    = form.submit 'Sign in'

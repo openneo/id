@@ -1,5 +1,5 @@
 - title 'Forgot your password?'
-= semantic_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |form|
+= app_state_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |form|
   = form.inputs do
     = form.input :email, :input_html => {:autofocus => true}
   = form.submit "Send me reset password instructions"

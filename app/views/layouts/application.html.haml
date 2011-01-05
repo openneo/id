@@ -13,12 +13,13 @@
     %h1= link_to 'OpenNeo ID', root_path
     %ul#nav
       - if user_signed_in?
-        %li= nav_link "Settings", edit_user_registration_path
-        %li= nav_link "Sign out of \"#{current_user.name}\"", destroy_user_session_path
+        %li= nav_link "Dashboard", :root
+        %li= nav_link "Settings", :edit_user_registration
+        %li= nav_link "Sign out of \"#{current_user.name}\"", :destroy_user_session
       - else
-        %li= nav_link 'Sign in', new_user_session_path
-        %li= nav_link 'Sign up', new_user_registration_path
-        %li= nav_link 'Forgot password?', new_user_password_path
+        %li= nav_link 'Sign in', :new_user_session
+        %li= nav_link 'Sign up', :new_user_registration
+        %li= nav_link 'Forgot password?', :new_user_password
     %h2= title
 
     - if notice
