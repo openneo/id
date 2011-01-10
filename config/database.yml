@@ -13,7 +13,9 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/test.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: mysql2
+  database: openneo_id
+  encoding: utf8
+  username: openneo_id
+  password: omSjGZ9a*9#hd9c!Y%MHRGKRIgq$CUIVES5ORKXo$IMxpiCU0vqB6Ob0YRe5kZ!O
+  host: newid.openneo.net

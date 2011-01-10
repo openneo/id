@@ -12,3 +12,15 @@ server:
     id: openneo
     
     secret: zaheh2draswAb8eneca$3an?2ADAsTuwra8h7BujUBr_w--p2-a@e?u!taQux3tr
+  
+  production:
+    apps:
+      impress: Dress to Impress
+      newimpress: Dress to Impress (beta)
+    
+    apps_without_passthru:
+      - impress
+    
+    id: openneo
+    
+    secret: dlAGOaqLa*oe#+e6rou0woaph3a&i14ouml!B5@clew@2swoan-ejia?L!tIu&!u
