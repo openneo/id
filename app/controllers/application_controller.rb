@@ -5,10 +5,12 @@ class ApplicationController < ActionController::Base
   
   before_filter :validate_app!
   
+  helper_method :remote_session_for
+  
   protected
   
   def after_sign_in_path_for(user)
-    if @app && remote_sign_in(user, session[:remote_session][@app.key])
+    if @app && remote_sign_in(user, remote_session_for(@app.key))
       remote_destination_url!
     else
       root_path
@@ -22,11 +24,15 @@ class ApplicationController < ActionController::Base
   end
   
   def app_key_valid?
-    params[:app] && session[:remote_session] && session[:remote_session][params[:app]]
+    params[:app] && remote_session_for(params[:app])
+  end
+  
+  def remote_session_for(app_key)
+    session[:remote_session] && session[:remote_session][app_key]
   end
   
   def remote_destination_url!
-    remote_session = session[:remote_session][@app.key]
+    remote_session = remote_session_for(@app.key)
     session[:remote_session].delete(@app.key)
     "http://#{@app.host}#{remote_session[:path]}"
   end

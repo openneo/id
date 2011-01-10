@@ -3,8 +3,9 @@ class HomeController < ApplicationController
   
   def finalize_login
     @app = Openneo::Auth::Server[params[:app]]
-    if @app && session[:remote_session] && session[:remote_session][@app.key]
-      if remote_sign_in(current_user, session[:remote_session][@app.key])
+    remote_session = remote_session_for(@app.key)
+    if @app && remote_session
+      if remote_sign_in(current_user, remote_session)
         redirect_to remote_destination_url!
       else
         redirect_to root_path

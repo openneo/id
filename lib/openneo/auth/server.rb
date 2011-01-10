@@ -32,6 +32,10 @@ module Openneo
             unless @config
               raise UnconfiguredError, "No \"server\" key in #{config_path}"
             end
+            @config = @config[Rails.env]
+            unless @config
+              raise UnconfiguredError, "No server.#{Rails.env} key in #{config_path}"
+            end
           end
           @config
         end
