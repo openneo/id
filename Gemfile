@@ -22,7 +22,13 @@ gem 'ruby-hmac', '~> 0.4.0'
 gem 'httparty', '~> 0.6.1'
 gem 'openneo-auth-signatory', '~> 0.1.0'
 
+
 gem 'gravtastic', '~> 3.1.0'
+
+group :production do
+  # For deploy
+  gem "exception_notification", :git => "git://github.com/rails/exception_notification", :require => 'exception_notifier'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'
