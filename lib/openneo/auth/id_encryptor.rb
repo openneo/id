@@ -6,7 +6,7 @@ module Devise
     class OpenneoId < Base
       def self.digest(password, stretches, salt, pepper)
         hmac = HMAC::SHA256.new(salt)
-        hmac << password
+        hmac << password.encode('ISO-8859-1')
         hmac.hexdigest
       end
     end
