@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-OpenneoIdRails::Application.config.secret_token = 'd4695104c0ca37d4a6790f6a4383888b468148d5cf2a53587b4913fed78149dc78d409e395a91f83c482a945ced8730cf53e5d3819519a4974859ff8964271dc'
+OpenneoIdRails::Application.config.secret_token = 'd8d49759c822bd6cce7db2f7ce74e68871028f84eb7c437d6f83526a14e7900cb7ba8803db460ab2ed93e0a980943ae47751de25325ee49886b626a8d10b3915'
