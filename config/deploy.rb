@@ -1,5 +1,9 @@
 set :application, "newid.openneo.net"
-set :repository,  "git://github.com/matchu/openneo-id-rails.git"
+set :local_repository,  "ssh://rails@newimpress/~/repos/openneo-id.git"
+set :repository, "/home/rails/repos/openneo-id.git"
+set :deploy_to, "/home/rails/id"
+set :user, "rails"
+set :branch, "deploy"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
