@@ -13,6 +13,3 @@ capybara-*.html
 /spec/tmp/*
 **.orig
 rerun.txt
-
-Capfile
-config/deploy.rb
