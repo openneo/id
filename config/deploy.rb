@@ -1,9 +1,10 @@
 set :application, "newid.openneo.net"
 set :local_repository,  "ssh://rails@newimpress/~/repos/openneo-id.git"
 set :repository, "/home/rails/repos/openneo-id.git"
-set :deploy_to, "/home/rails/id"
+set :deploy_to, "/home/rails/openneo_id"
 set :user, "rails"
 set :branch, "deploy"
+default_run_options[:pty] = true
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -15,6 +16,20 @@ role :db,  application, :primary => true
 $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
 set :rvm_ruby_string, 'ruby-1.9.2@openneo_id'        # Or whatever env you want it to run in.
 require "bundler/capistrano"
+
+namespace :deploy do
+  task :start do
+    sudo "monit start openneo-id"
+  end
+  
+  task :stop do
+    sudo "monit stop openneo-id"
+  end
+  
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    sudo "monit restart openneo-id"
+  end
+end
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need

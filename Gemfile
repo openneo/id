@@ -28,6 +28,7 @@ gem 'gravtastic', '~> 3.1.0'
 group :production do
   # For deploy
   gem "exception_notification", :git => "git://github.com/rails/exception_notification", :require => 'exception_notifier'
+  gem "thin", '~> 1.2.7'
 end
 
 # Use unicorn as the web server
