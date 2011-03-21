@@ -16,16 +16,17 @@ role :db,  application, :primary => true
 $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
 set :rvm_ruby_string, 'ruby-1.9.2@openneo_id'        # Or whatever env you want it to run in.
 require "bundler/capistrano"
+#require 'rvm/capistrano'
 
 namespace :deploy do
   task :start do
     sudo "monit start openneo-id"
   end
-  
+
   task :stop do
     sudo "monit stop openneo-id"
   end
-  
+
   task :restart, :roles => :app, :except => { :no_release => true } do
     sudo "monit restart openneo-id"
   end
@@ -42,3 +43,4 @@ end
 #     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
 #   end
 # end
+
