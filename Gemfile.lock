@@ -40,6 +40,7 @@ GEM
     compass (0.10.6)
       haml (>= 3.0.4)
     crack (0.1.8)
+    daemons (1.1.0)
     devise (1.1.8)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 1.0.2)
@@ -118,4 +119,3 @@ DEPENDENCIES
   ruby-hmac (~> 0.4.0)
   ruby_parser (~> 2.0)
   thin (~> 1.2.7)
-
