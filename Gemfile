@@ -22,6 +22,8 @@ gem 'ruby-hmac', '~> 0.4.0'
 gem 'httparty', '~> 0.6.1'
 gem 'openneo-auth-signatory', '~> 0.1.0'
 
+gem 'gravtastic', '~> 3.1.0'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -44,3 +46,4 @@ gem 'openneo-auth-signatory', '~> 0.1.0'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
