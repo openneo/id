@@ -20,15 +20,15 @@ require "bundler/capistrano"
 
 namespace :deploy do
   task :start do
-    sudo "monit start openneo-id"
+    run "touch #{current_release}/tmp/restart.txt"
   end
 
   task :stop do
-    sudo "monit stop openneo-id"
+
   end
 
   task :restart, :roles => :app, :except => { :no_release => true } do
-    sudo "monit restart openneo-id"
+    run "touch #{current_release}/tmp/restart.txt"
   end
 end
 
