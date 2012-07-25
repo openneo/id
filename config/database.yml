@@ -1,9 +1,9 @@
 development:
   adapter: mysql2
-  database: openneo_id_rails
+  database: openneo_id
   encoding: utf8
   username: openneo_id
-  password: 
+  password: fVRCCwLC
   host: localhost
 
 test:
