@@ -1,5 +1,5 @@
 set :application, "newid.openneo.net"
-set :local_repository,  "ssh://rails@newimpress/~/repos/openneo-id.git"
+set :local_repository,  "ssh://rails@impress.openneo.net/~/repos/openneo-id.git"
 set :repository, "/home/rails/repos/openneo-id.git"
 set :deploy_to, "/home/rails/openneo_id"
 set :user, "rails"
