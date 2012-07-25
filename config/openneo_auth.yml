@@ -2,12 +2,11 @@ server:
   development:
     apps:
       impress: Dress to Impress
-      newimpress: Dress to Impress (beta)
-      impress.dev: Dress to Impress (dev)
+      impress.dev: Dress to Impress (dev server)
+      oldimpress: Dress to Impress (old, boring backup server)
     
     apps_without_passthru:
-      - impress
-      - betaimpress
+      - oldimpress
     
     id: openneo
     
@@ -16,10 +15,10 @@ server:
   production:
     apps:
       impress: Dress to Impress
-      newimpress: Dress to Impress (beta)
+      oldimpress: Dress to Impress (old, boring backup server)
     
     apps_without_passthru:
-      - impress
+      - oldimpress
     
     id: openneo
     
