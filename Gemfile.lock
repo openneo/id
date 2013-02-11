@@ -118,6 +118,7 @@ DEPENDENCIES
   haml (~> 3.0)
   hpricot (~> 0.8)
   httparty (~> 0.6.1)
+  json (~> 1.7.7)
   mysql2 (~> 0.2.6)
   openneo-auth-signatory (~> 0.1.0)
   rails (= 3.0.20)
