@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.20'
+gem 'rails', '3.1.12'
 
 # https://groups.google.com/d/topic/rubyonrails-security/4_YvCpLzL58/discussion
 gem 'json', '~> 1.7.7'
@@ -12,7 +12,7 @@ gem 'compass', '~> 0.10'
 gem 'formtastic', '~> 1.2.2'
 gem 'devise', '~> 1.1.5'
 gem 'haml', '~> 3.0'
-gem 'mysql2', '~> 0.2.6'
+gem 'mysql2', '~> 0.3.11'
 
 # For Devise generators
 gem 'hpricot', '~> 0.8'
