@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :lockable, :registerable, :recoverable,
-    :trackable, :validatable
+    :trackable, :validatable, :encryptable
 
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
@@ -15,4 +15,3 @@ class User < ActiveRecord::Base
     {:id => id, :name => name}
   end
 end
-

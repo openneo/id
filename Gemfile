@@ -10,7 +10,8 @@ gem 'json', '~> 1.7.7'
 
 gem 'compass', '~> 0.10'
 gem 'formtastic', '~> 1.2.2'
-gem 'devise', '~> 1.1.5'
+gem 'devise', '~> 2.2.4'
+gem 'devise-encryptable', '~> 0.1.2'
 gem 'haml', '~> 3.0'
 gem 'mysql2', '~> 0.3.11'
 
