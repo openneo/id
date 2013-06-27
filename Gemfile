@@ -9,7 +9,7 @@ gem 'json', '~> 1.7.7'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'compass', '~> 0.10'
-gem 'formtastic', '~> 1.2.2'
+gem 'formtastic', '~> 2.2.1'
 gem 'devise', '~> 2.2.4'
 gem 'devise-encryptable', '~> 0.1.2'
 gem 'haml', '~> 3.0'
