@@ -1,6 +1,6 @@
 - title @app ? "Sign into #{link_to @app.name, @app.root_url}".html_safe : "Sign in"
-= app_state_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form|
+= app_state_form_for(resource, as: resource_name, url: session_path(resource_name)) do |form|
   = form.inputs do
-    = form.input :name, :input_html => {:autofocus => true}
+    = form.input :name, label: 'Username', input_html: {autofocus: true}
     = form.input :password
     = form.submit 'Sign in'
