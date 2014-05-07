@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.16'
+gem 'rails', '3.2.18'
 
 # https://groups.google.com/d/topic/rubyonrails-security/4_YvCpLzL58/discussion
 gem 'json', '~> 1.7.7'
