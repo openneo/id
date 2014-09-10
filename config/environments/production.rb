@@ -56,7 +56,7 @@ OpenneoIdRails::Application.configure do
      :domain         => "openneo.net",
      :authentication => :login,
      :user_name      => "errors@openneo.net",
-     :password       => ENV['OPENNEO_EMAIL_PASSWORD'],
+     :password       => ENV.fetch('OPENNEO_EMAIL_PASSWORD'),
      :enable_starttls_auto => false
   }  
   config.action_mailer.raise_delivery_errors = true
