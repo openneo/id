@@ -3,7 +3,7 @@ set :local_repository,  "ssh://rails@impress.openneo.net/~/repos/openneo-id.git"
 set :repository, "/home/rails/repos/openneo-id.git"
 set :deploy_to, "/home/rails/openneo_id"
 set :user, "rails"
-set :branch, "deploy"
+set :branch, "deployment"
 default_run_options[:pty] = true
 
 set :scm, :git
@@ -13,10 +13,10 @@ role :web, application
 role :app, application
 role :db,  application, :primary => true
 
-$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
-set :rvm_ruby_string, 'ruby-1.9.2@openneo_id'        # Or whatever env you want it to run in.
 require "bundler/capistrano"
-#require 'rvm/capistrano'
+require 'rvm/capistrano'
+
+set :rvm_type, :system
 
 namespace :deploy do
   task :start do
