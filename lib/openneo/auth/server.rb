@@ -36,6 +36,7 @@ module Openneo
             unless @config
               raise UnconfiguredError, "No server.#{Rails.env} key in #{config_path}"
             end
+            @config['apps_without_passthru'] ||= []
           end
           @config
         end

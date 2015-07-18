@@ -5,13 +5,16 @@ gem 'rails', '3.2.16'
 # https://groups.google.com/d/topic/rubyonrails-security/4_YvCpLzL58/discussion
 gem 'json', '~> 1.7.7'
 
-gem 'sass-rails', '~> 3.2.3'
-gem 'uglifier', '>= 1.0.3'
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'compass', '~> 0.10'
+# Ugh, I couldn't make stylesheets run right in the dev environment.
+# (It complained that #eeffee 50% is not a color stop?)
+# So just rely on the stylesheets in public >_<
+# gem 'compass', '~> 0.10'
+# gem 'sass-rails', '~> 3.2.3'
+# gem 'uglifier', '>= 1.0.3'
+
 gem 'formtastic', '~> 2.2.1'
 gem 'devise', '~> 2.2.4'
 gem 'devise-encryptable', '~> 0.1.2'

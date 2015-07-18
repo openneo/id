@@ -1,13 +1,7 @@
 server:
   development:
     apps:
-      impress: Dress to Impress
-      newimpress: Dress to Impress (beta)
       impress.dev: Dress to Impress (dev)
-    
-    apps_without_passthru:
-      - impress
-      - betaimpress
     
     id: openneo
     
